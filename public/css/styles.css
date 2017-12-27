@@ -14109,11 +14109,19 @@ hr.transparent {
     border-bottom: 2px solid #0C7BEA; }
 
 .yc-rotate-45 {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg); }
+
+.yc-profile-icon {
+  font-size: 25px;
+  color: #868686; }
+
+.ye-profile-label {
+  color: #0C7BEA !important;
+  background-color: white !important; }
 
 .chart-legend,
 .bar-legend,

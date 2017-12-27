@@ -9,6 +9,8 @@ import CandidatesProfile from './CandidatesProfile';
 class CandidatesReport extends React.Component {
 
     render() {
+        var profile = true;
+        var anonymous = false;
         return(
           <div>
             <div className="row ml-2 mr-2">
@@ -18,13 +20,13 @@ class CandidatesReport extends React.Component {
                       Front end React Sr
                     </h2>
                 </div>
-                <CandidatesActions/>
+                {profile && !anonymous ? <CandidatesActions/> : <div/>}
             </div>
             <CandidatesReportPresentation/>
-            <CandidatesMenu/>
-            <CandidatesProfile/>
-            <CandidatesChartContainer/>
-            <CandidatesTableContainer/>
+            {!anonymous ? <CandidatesMenu/> : <div/>}
+            {profile ? <CandidatesProfile anonymous={anonymous}/> : <div/>}
+            {!profile ? <CandidatesChartContainer/> : <div/>}
+            {!profile ? <CandidatesTableContainer/> : <div/>}
           </div>
         )
     }

@@ -1,0 +1,75 @@
+.boxshadow-top {
+     @include prefix((
+          box-shadow: $boxshadow-top,
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+     ), webkit moz ms o);
+}
+
+.boxshadow-right {
+    @include prefix((
+         box-shadow: $boxshadow-right,
+         transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+    ), webkit moz ms o);
+}
+
+.boxshadow-xs {
+     @include prefix((
+          box-shadow: $boxshadow-xs,
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+     ), webkit moz ms o);
+}
+
+.boxshadow-sm {
+     @include prefix((
+          box-shadow: $boxshadow-sm,
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+     ), webkit moz ms o);
+}
+
+.boxshadow-md {
+     @include prefix((
+          box-shadow:$boxshadow-md,
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+     ), webkit moz ms o);
+}
+
+.boxshadow-lg {
+     @include prefix((
+          box-shadow:$boxshadow-lg ,
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+     ), webkit moz ms o ms);
+}
+
+.no-boxshadow {
+    @include prefix((
+        box-shadow: none ,
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+   ), webkit moz ms o ms);
+}
+
+.hover-bxS-s{
+     &:hover{
+          @include prefix((
+               box-shadow: $boxshadow-sm,
+               transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+          ), webkit moz ms o ms);
+     }
+}
+
+.hover-bxS-m{
+     &:hover{
+          @include prefix((
+               box-shadow: $boxshadow-md,
+               transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+          ), webkit moz ms o);
+     }
+}
+
+.hover-bxS-l{
+     &:hover{
+          @include prefix((
+               box-shadow: $boxshadow-lg,
+               transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+          ), webkit moz ms o);
+     }
+}

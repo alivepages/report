@@ -1,0 +1,78 @@
+@keyframes progress-bar-stripes {
+  from { background-position: $progress-height 0; }
+  to { background-position: 0 0; }
+}
+.yc-ProfileProgressBar{
+	width: calc( 100% - 50px );
+	display: inline-block;
+}
+.yc-ProfileProgressBar-editButton{
+	width: 50px;
+	display: inline-block;
+	padding: 35px 0 0 0;
+}
+.progress {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	overflow: hidden; // force rounded corners by cropping it
+	font-size: $progress-font-size;
+	line-height: $progress-height;
+	text-align: center;
+	background-color: $progress-bg;
+	@include border-radius($progress-border-radius);
+	.progress-bar{
+		width: 100%;
+		height: $progress-height;
+		background: $brand-primary; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(right, $brand-primary, #3998f7); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right, $brand-primary, #3998f7); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right, $brand-primary, #3998f7); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(right, $brand-primary, #3998f7); /* Standard syntax */
+	}
+}
+.yc-progress-bar_container{
+	width: calc(100% -  50px);
+	height: 1.15rem;
+	overflow: hidden;
+	border-radius: $border-radius-sm;
+	border: 2px solid $gray-lighter;
+	padding: 1px ;
+	float: left;
+}
+.yc-progresBar-title{
+	font-size: .9rem;
+	color: $gray;
+	font-weight: bold;
+}
+.yc-progresBar_value{
+	width: 48px;
+	float: right;
+	color: $gray;
+	font-size: .8rem;
+	text-align: center;
+	font-weight: bold;
+}
+.yc-progresBar{
+	width: 100%;
+	padding: 1rem 1.1rem;
+	min-height: 50px;
+}
+
+.yc-progress-bar {
+	height: $progress-height;
+	line-height: $progress-height;
+	color: $progress-bar-color;
+	border-radius: $border-radius-sm;
+
+	@include transition($progress-bar-transition);
+}
+
+.progress-bar-striped {
+  @include gradient-striped();
+  background-size: $progress-height $progress-height;
+}
+
+.progress-bar-animated {
+  animation: progress-bar-stripes $progress-bar-animation-timing;
+}

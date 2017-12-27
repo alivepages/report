@@ -1,0 +1,65 @@
+.logIn-tabs{
+	 background-color: $gray-lightest;
+	 font-size: 0;
+
+	 .nav-item{
+		  width: 50%;
+		  text-align: center;
+		  display: inline-block;
+		  cursor: pointer;
+	 }
+	 .nav-link{
+		  border-radius: 1rem;
+		  cursor: pointer;
+		  padding: .5rem;
+		  background-color: $gray-lightest;
+		  border-radius: 0;
+			color: $gray-light!important;
+			font-size: 1rem;
+		  font-weight: bold;
+			margin: 10px 0 0 0;
+		  &.active{
+			   background-color: #fff;
+			   border-radius: 1rem 1rem 0 0;
+			   box-shadow: $boxshadow-top;
+			   font-weight: bold;
+			   color: $gray!important;
+		  }
+		  &:hover, &.active{
+				border: 0 solid #fff;
+				border-bottom-color: #fff;
+				color: $brand-primary;
+		  }
+	 }
+}
+.nav-tabs {
+  .nav-link {
+	color:#000;
+	&.active {
+	  color: $gray-dark;
+	  background: #fff;
+	  border-bottom-color: #fff;
+	  &:focus {
+		background: #fff;
+		border-color: $border-color;
+		border-bottom-color: #fff;
+	  }
+	}
+  }
+}
+
+.tab-content {
+  padding: 1rem;
+  background: #fff;
+  border: 0 solid $border-color;
+  .tab-pane {
+	padding: $spacer;
+  }
+}
+
+.card-block {
+  .tab-content {
+	margin-top: 0;
+	border: 0;
+  }
+}

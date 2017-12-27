@@ -1,0 +1,816 @@
+//signIn
+.fixed{
+	position: absolute;
+	top: 300px;
+}
+.signIn-form{
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	right: 15px;
+	left: 15px;
+	padding: 0 15px 0 0;
+
+	@media (max-width: 766px){
+		position: relative;
+		right: 0;
+		left: 0;
+		padding: 0 15px 2rem 0;
+	}
+	.logoResponsive{
+		max-width: 230px;
+		margin: auto;
+		display: block;
+		padding: 2rem;
+	}
+
+	form{
+		padding: 0 2vh;
+		max-width: 450px;
+		margin: auto;
+		 @media (max-width: 576px){
+			 padding: 0 8vh;
+		 }
+		input{
+			margin: 0 0 1rem;
+		}
+
+		.font-sm{
+			color: $gray;
+			text-align: center;
+		}
+		.signIn-socialmedia{
+			width: 47.5%;
+			margin: auto;
+			display: inline-block;
+			color: #fff;
+
+		}
+		.btn-evaluatest{
+			margin: 0 0 0 5%;
+		}
+	}
+}
+
+.DayPicker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+ 	flex-wrap: wrap;
+  -webkit-box-pack: center;
+ 	-ms-flex-pack: center;
+	justify-content: center;
+  position: relative;
+  padding: 1rem 0;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+ 	-ms-user-select: none;
+	user-select: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+ 	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.DayPicker-Month {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+ 	-ms-user-select: none;
+	user-select: none;
+  margin: 0 1rem;
+}
+
+  .DayPicker-NavBar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 .5rem;
+    top: 1rem;
+  }
+
+  .DayPicker-NavButton {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+    .DayPicker-NavButton--prev {
+ 	left: 1rem;
+ 	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjI2cHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDI2IDUwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy4zLjIgKDEyMDQzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5wcmV2PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc2tldGNoOnR5cGU9Ik1TUGFnZSI+CiAgICAgICAgPGcgaWQ9InByZXYiIHNrZXRjaDp0eXBlPSJNU0xheWVyR3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzLjM5MzE5MywgMjUuMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC0xMy4zOTMxOTMsIC0yNS4wMDAwMDApIHRyYW5zbGF0ZSgwLjg5MzE5MywgMC4wMDAwMDApIiBmaWxsPSIjNTY1QTVDIj4KICAgICAgICAgICAgPHBhdGggZD0iTTAsNDkuMTIzNzMzMSBMMCw0NS4zNjc0MzQ1IEwyMC4xMzE4NDU5LDI0LjcyMzA2MTIgTDAsNC4yMzEzODMxNCBMMCwwLjQ3NTA4NDQ1OSBMMjUsMjQuNzIzMDYxMiBMMCw0OS4xMjM3MzMxIEwwLDQ5LjEyMzczMzEgWiIgaWQ9InJpZ2h0IiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K");
+    }
+
+    .DayPicker-NavButton--next {
+ 	right: 1rem;
+ 	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjI2cHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDI2IDUwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy4zLjIgKDEyMDQzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5uZXh0PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc2tldGNoOnR5cGU9Ik1TUGFnZSI+CiAgICAgICAgPGcgaWQ9Im5leHQiIHNrZXRjaDp0eXBlPSJNU0xheWVyR3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuOTUxNDUxLCAwLjAwMDAwMCkiIGZpbGw9IiM1NjVBNUMiPgogICAgICAgICAgICA8cGF0aCBkPSJNMCw0OS4xMjM3MzMxIEwwLDQ1LjM2NzQzNDUgTDIwLjEzMTg0NTksMjQuNzIzMDYxMiBMMCw0LjIzMTM4MzE0IEwwLDAuNDc1MDg0NDU5IEwyNSwyNC43MjMwNjEyIEwwLDQ5LjEyMzczMzEgTDAsNDkuMTIzNzMzMSBaIiBpZD0icmlnaHQiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=");
+    }
+
+
+  .DayPicker-Caption {
+    display: table-caption;
+    height: 1.5rem;
+    text-align: center;
+  }
+
+  .DayPicker-Weekdays {
+    display: table-header-group;
+  }
+
+    .DayPicker-WeekdaysRow {
+ 	display: table-row;
+    }
+
+ 	.DayPicker-Weekday {
+   	display: table-cell;
+   	padding: .5rem;
+   	font-size: .875em;
+   	text-align: center;
+   	color: #8b9898;
+ 	}
+
+  .DayPicker-Body {
+    display: table-row-group;
+  }
+
+    .DayPicker-Week {
+ 	display: table-row;
+    }
+
+ 	.DayPicker-Day {
+   	display: table-cell;
+   	padding: .5rem;
+   	border: 1px solid #eaecec;
+   	text-align: center;
+   	cursor: pointer;
+   	vertical-align: middle;
+ 	}
+
+ 	.DayPicker-WeekNumber {
+   	display: table-cell;
+   	padding: .5rem;
+   	text-align: right;
+   	vertical-align: middle;
+   	min-width: 1rem;
+   	font-size: 0.75em;
+   	cursor: pointer;
+   	color: #8b9898;
+ 	}
+
+  .DayPicker--interactionDisabled .DayPicker-Day {
+    cursor: default;
+  }
+
+  .DayPicker-Footer {
+    display: table-caption;
+    caption-side: bottom;
+    padding-top: .5rem;
+  }
+
+  .DayPicker-TodayButton {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+  	box-shadow: none;
+    cursor: pointer;
+    color: #4A90E2;
+    font-size: 0.875em;
+  }
+
+/* Default modifiers */
+
+.DayPicker-Day--today {
+  color: #d0021b;
+  font-weight: 500;
+}
+
+.DayPicker-Day--disabled {
+  color: #dce0e0;
+  cursor: default;
+  background-color: #eff1f1;
+}
+
+.DayPicker-Day--outside {
+  cursor: default;
+  color: #dce0e0;
+}
+
+/* Example modifiers */
+
+.DayPicker-Day--sunday {
+  background-color: #f7f8f8;
+}
+
+.DayPicker-Day--sunday:not(.DayPicker-Day--today) {
+  color: #dce0e0;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  color: #FFF;
+  background-color: #4A90E2;
+}
+
+/* DayPickerInput */
+
+.DayPickerInput {
+  display: inline-block;
+}
+
+.DayPickerInput-OverlayWrapper {
+  position: relative;
+}
+
+.DayPickerInput-Overlay {
+  left: 0;
+  position: absolute;
+  background: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+}
+
+.yc-navbar-nav {
+    line-height: 70px;
+
+    &--home {
+        line-height: 55px;
+    }
+
+    &--item {
+        padding: 0 1.2rem;
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & {
+            &::after {
+                background-color: transparent;
+                bottom: 0;
+                content: '';
+                height: 3px;
+                left: 0;
+                width: 0;
+                position: absolute;
+                transition: background-color 0.8s, width 0.8s;
+            }
+        }
+
+        &:hover,
+        & > .active {
+
+            &::after {
+                background-color: white;
+                width: 100%;
+            }
+        }
+
+        & > .nav-link,
+        & > .nav-link.active:focus,
+        & > .nav-link.active:hover,
+        & > .nav-link.active:visited, {
+            color: white;
+        }
+    }
+
+    &--vertical {
+        & > .nav-item {
+            position: relative;
+
+            & > .nav-link {
+                color: $brand-extra;
+            }
+
+            & > .nav-link:hover {
+                color: $brand-primary;
+            }
+
+            & > .nav-link.active {
+                color: $brand-primary;
+                font-weight: bold;
+
+                &::after {
+                    background-color: $brand-primary;
+                    top: 0;
+                    content: '';
+                    height: 100%;
+                    left: 0;
+                    width: 4px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.dotstyle ul {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	cursor: default;
+
+	li {
+		position: relative;
+		display: block;
+		float: left;
+		margin: 0 8px;
+		width: 13px;
+		height: 13px;
+
+		a, span {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			outline: none;
+			border-radius: 50%;
+			text-indent: -999em;
+			position: absolute;
+		}
+	}
+}
+
+.dotstyle-puff li {
+
+	a, span {
+		background-color: $gray-lighter;
+		border: 1px solid $gray;
+		-webkit-transition: border-color 0.3s ease;
+		transition: border-color 0.3s ease;
+
+		&.active {
+			background-color: $brand-accent;
+			border-color: $brand-accent;
+		}
+	}
+}
+
+
+// ****************** Enterprise styles  *********************
+
+.ye-avatar-user-icon {
+  img {
+    width: 100%;
+  }
+}
+
+.ye-empty-avatar-user {
+  fill: $brand-extra;
+}
+
+.ye-link-white {
+    color: white;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+.ye-badge--size {
+  font-size: 45%;
+}
+
+.ye-cursor-pointer {
+  cursor: pointer
+}
+
+.ye-sidebar {
+  position: fixed;
+  top: 60px;
+  z-index: 1045;
+  width: 70px;
+  height: calc(100vh - 60px);
+  background-color: white;
+
+  @include media-breakpoint-down(md) {
+    width: 0;
+  }
+}
+
+.ye-full-app-body {
+  margin-left: 80px;
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+  }
+}
+
+.ye-padding-navbar-fixed {
+    padding-top: 5.5rem
+}
+
+.ye-without-sidebar-app-body {
+  @include gradient-y($brand-primary, $brand-info);
+  color: white;
+  height: 100vh;
+}
+
+.ye-bg-white {
+    background-color: #fff;
+}
+
+.ye-logo-wrapper {
+	background-color: $brand-primary;
+  padding: 0 .9em;
+	height: 60px;
+	line-height: 60px;
+	width: 70px;
+}
+
+.ye-btn-link-icon {
+	@include button-custom($brand-accent, '\f0c1')
+}
+
+.ye-btn-tab {
+	opacity: 0.5;
+
+	&:hover,
+	&.active {
+		opacity: 1;
+	}
+}
+
+.ye-recaptcha {
+  & > div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ye-slider-button {
+	position: absolute;
+	padding-top: 2rem;
+	padding-left: 2rem;
+	z-index: 99999;
+}
+
+.ye-logo-home,
+.ye-logo-footer {
+	margin: auto;
+	max-width: 230px;
+	padding: 2rem;
+	display: block;
+}
+
+.ye-logo-footer {
+  max-width: 150px;
+}
+
+.ye-hero {
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.ye-image-full {
+  width: 100%;
+  border: 2px dashed $brand-accent;
+  text-align: center;
+
+  i {
+    color: $brand-accent;
+    font-size: 3rem;
+  }
+}
+
+.ye-right-side {
+    background-color: #fff;
+    height: 100vh;
+    left: 67%;
+    position: relative;
+    top: 0;
+    width: 33%;
+
+    &__content {
+        position: relative;
+        width: 100%;
+    }
+
+
+    &.instate {
+        opacity: 1;
+        transition: 0.2s;
+    }
+
+    @media only screen and (max-width: 1024px) {
+		left: 0;
+        width: 100%;
+        height: 110vh;
+
+        &__content {
+            top: 15vh;
+        }
+    }
+}
+
+.ye-left-side {
+	position: fixed;
+	top: 0;
+	right: 33%;
+	width: 67%;
+	height: 100%;
+	background: url('../images/bg/bg-home.jpg') no-repeat 85% center fixed;
+	background-size: cover;
+	z-index: 1;
+	transition: 0.3s;
+
+	@media only screen and (max-width: 1024px) {
+		display: none;
+	}
+}
+
+.ye-multiselect--tag {
+	.rw-multiselect-tag {
+		height: auto;
+	}
+
+	.rw-multiselect-taglist > li {
+		background-color: $brand-accent !important;
+	}
+
+	.rw-multiselect-tag-btn {
+		span {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.ye-text-dark {
+  color: $brand-extra;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.ye-custom-dropdown {
+  &.rw-dropdown-list {
+    border: none !important;
+    width: 35%;
+    cursor: pointer;
+    margin-bottom: 0;
+
+    .rw-widget-picker {
+      height: 0.5rem;
+    }
+
+    .rw-widget-input {
+      box-shadow: none;
+    }
+
+    .rw-input {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .rw-input:focus,
+    .rw-input:active,
+    &:focus,
+    &:active {
+      outline: 0;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+    }
+  }
+
+  .rw-select {
+    display: none;
+  }
+}
+
+.ye-dropdown-candidate-states {
+  cursor: pointer;
+}
+
+.ye-candidate-card-states {
+  border-top: 1px solid $brand-primary;
+}
+
+.ye-size-small {
+  font-size: 70%;
+}
+
+.ye-responsibilities-field {
+  height: 168px;
+}
+
+.ye-vacant-view {
+  background-color: white;
+  height: 100%;
+  margin-top: 58px;
+  padding-bottom: 5%;
+
+  &__header {
+    color: white;
+    @include gradient-y($brand-primary, $brand-info);
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+
+  &__features {
+    padding: 3rem 2.2rem;
+    border-bottom: 1px solid $gray-lighter;
+    text-align: center;
+
+    &-items {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 2rem;
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+}
+.ye-reduce-mt-10{
+    margin-top: -10px;
+}
+
+.ye-disabled {
+  pointer-events: none;
+  color: $gray-light;
+  cursor: pointer;
+}
+
+.ye-border-bottom {
+  border-bottom: 2px solid $gray-lighter;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.testDesign0 {
+	border: 1px solid blue;
+	background-image: url('/images/guia1b.png');
+	min-height: 600px;
+	background-position: top;
+  background-size: cover;
+	padding: 15px;
+	margin-top: 70px;
+}
+
+.ye-tools {
+	button{
+		border: solid 2px #95989A;
+		background-color: white;
+	}
+	small {
+		font-weight: bold;
+	}
+}
+
+.dropdown-menu {
+	li {
+		a {
+			text-decoration: none;
+			color: inherit;
+			padding: 10px 25px;
+			display: block;
+			white-space: nowrap;
+		}
+	}
+}
+
+.video-react {
+	height: 172px !important;
+}
+
+.video-react-video {
+		height: auto !important;
+}
+
+.video-react-big-play-button {
+	top: 50% !important;
+	left: 50% !important;
+	margin-top: -1em !important;
+	margin-left: -1em !important;
+	width: 2em !important;
+	height: 2em !important;
+	border-radius: 50% !important;
+	&:before{
+		font-size: 60px !important;
+		padding-top: 5px !important;
+	}
+}
+
+.video-react-control-bar{
+	display: none;
+	visibility: hidden;
+}
+
+.ye-arrow {
+	font-size: 24px;
+	top: 4px;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: -22px;
+}
+
+
+.ye-social [class*="fa fa-"] {
+    background-color: #007AB9;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 3px;
+    width: 30px;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.ye-social {
+	.fa-facebook {
+		background-color: #3B5998 !important;
+	}
+	.fa-twitter {
+		background-color: #55ACEE !important;
+	}
+}
+
+.ye-afinity {
+	text-align: right;
+	span {
+		font-size: 24px;
+	}
+}
+
+.ye-btn-xs{
+	font-size: 12px !important;
+}
+
+.ye-avatar-user-icon img {
+	max-width: 100px
+}
+
+.candidatesCard {
+	.card-header{
+		background-color: white;
+	}
+}
+
+.ye-escala {
+	max-width: 600px;
+}
+
+.ye-fortalezas {
+
+}
+
+.ye-fortalezas-icon {
+	font-size: 35px;
+}
+
+.ye-bad-icon {
+    color: #d21413 !important;
+}
+
+.yc-report-graph {
+    height: 500px;
+    overflow: hidden;
+}
+
+.yc-candidates-menu {
+	a{
+		height: 56px;
+		display: inline-block;
+		margin-right: 61px;
+		padding: 10px;
+		color: #607D8B;
+		font-weight: bold;
+		&.active {
+				color: #0C7BEA;
+				border-bottom: 2px solid #0C7BEA;
+		}
+		&:hover {
+				color: #0C7BEA;
+				border-bottom: 2px solid #0C7BEA;
+		}
+	}
+}
+
+.yc-rotate-45 {
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}

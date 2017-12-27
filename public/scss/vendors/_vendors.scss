@@ -1,0 +1,33 @@
+@import "chart.js/chart";
+//@import "react-widgets/widgets";
+@import "../../../node_modules/react-widgets/lib/scss/react-widgets";
+@import "circle/circle";
+
+
+// Custom styles to vendors
+
+.rw-widget-input,
+.rw-filter-input {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+}
+
+.rw-widget-container {
+    border: none;
+}
+
+.rw-i-caret-down:before {
+    font-family: 'FontAwesome';
+    content: "\f0d7";
+}
+
+.rw-i.rw-loading {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8);
+    height: auto;
+    text-align: center;
+
+    &:before {
+        content: "\f110";
+        font-family: 'FontAwesome';
+    }
+}

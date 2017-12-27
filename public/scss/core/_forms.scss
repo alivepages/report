@@ -1,0 +1,421 @@
+form{
+	width: 100%;
+}
+
+.yc-showPasword{
+	width: 100%;
+	display: inline-block;
+	color: $gray-light;
+	input, span{
+		display: inline-block;
+		position: relative;
+		margin: 0 .5rem .8rem 0!important;
+	}
+}
+.yc-valueLegth{
+	color: $gray;
+	font-size: .8rem;
+	float: right;
+	&.danger{
+		color: $brand-danger!important;
+		font-weight: bold;
+	}
+}
+.yc-form-control-height__m{
+	 height: 40px;
+}
+.input-text{
+	 width: 100%;
+}
+$phoneLada:50px;
+.yc-phoneLada{
+	width:$phoneLada;
+	float: left;
+	color: $gray-light;
+	font-size: 1.3rem;
+	margin: 2px 0 0 0;
+}
+.yc-phoneInput{
+	width: calc( 100% - #{$phoneLada});
+	float: right;
+}
+.yc-avatar__content{
+	padding: 0;
+	margin: auto;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 50%;
+	position: relative;
+	.yc-avatar__control{
+		 position: absolute;
+		 z-index: 1;
+		 top: 0;
+		 width: 150px;
+		 height: 150px;
+		 border: 3px solid $gray-lighter;
+		 border-radius: 50%;
+		 text-align: center;
+		 display: table;
+		 overflow: hidden;
+
+		 &:before{
+			  content: '+';
+			  font-weight: bold;
+			  font-size: 2rem;
+			  position: absolute;
+			  top: 33%;
+			  right: 43%;
+			  z-index: -1;
+			  color: $brand-primary;
+		 }
+
+		 img{
+			  width: 150px;
+			  height: auto;
+			  position: absolute;
+			  right: 0;
+		 }
+		 i{
+			  color: $brand-primary;
+			  display: table-cell;
+			  vertical-align: middle;
+		 }
+	}
+}
+.yc-add-avatar__content{
+	 padding: 0;
+	 margin: auto;
+	 width: 150px;
+	 height: 150px;
+	 position: relative;
+	 cursor: pointer;
+	 overflow: hidden;
+	 border-radius: 50%;
+	 
+	 .yc-add-avatar__input, .form-control-file{
+		  width: 150px;
+		  height: 150px;
+		  margin: auto;
+		  display: block;
+		  opacity: 0;
+		  z-index: 10;
+		  position: absolute;
+		  top: 0;
+		  cursor: pointer;
+	 }
+	 .yc-add-avatar__control{
+		  position: absolute;
+		  z-index: 1;
+		  top: 0;
+		  width: 150px;
+		  height: 150px;
+		  border: 3px solid $gray-lighter;
+		  border-radius: 50%;
+		  text-align: center;
+		  display: table;
+		  overflow: hidden;
+		  cursor: pointer;
+
+		  &.imageError{
+			   border: 3px solid $brand-danger;
+		  }
+
+		  &:before{
+			   content: '+';
+			   cursor:pointer;
+			   font-weight: bold;
+			   font-size: 2rem;
+			   position: absolute;
+			   top: 33%;
+			   right: 43%;
+			   z-index: -1;
+			   color: $brand-primary;
+		  }
+
+		  img{
+			   width: 150px;
+			   height: auto;
+			   position: absolute;
+			   right: 0;
+			   margin-top: 50%;
+			   transform: translateY(-50%);
+		  }
+		  i{
+			   color: $brand-primary;
+			   display: table-cell;
+			   vertical-align: middle;
+		  }
+	 }
+
+}
+.yc-add-avatar__info{
+	text-align: center;
+	width: 100%;
+}
+$videosquere: 200px;
+$videosquereSmall:  150px;
+$videosquereLarge:  100%;
+.yc-add-video__content{
+	 padding: 0;
+	 margin:0 ;
+	 width: $videosquere;
+	 height: $videosquere;
+	 overflow: hidden;
+	 position: relative;
+	border-radius: .8rem;
+
+	 @media (max-width: 1500px){
+		  width: $videosquereSmall !important;
+		  height: $videosquereSmall !important;
+		  .yc-add-video__input, .yc-add-video__control{
+			   width: $videosquereSmall !important;
+			   height: $videosquereSmall !important;
+		  }
+	}
+
+	 @media (max-width: 500px){
+		  width: 90vw!important ;
+		  height: auto!important;
+		  margin: auto;
+		  video{
+			  width: 100%;
+			 height:  auto!important;
+			   overflow: hidden;
+		  }
+		  .yc-add-video__input, .yc-add-video__control{
+			   width: $videosquereLarge !important;
+			   height: 400px!important;
+			   margin: 0
+		  }
+	 }
+	 .yc-add-video__input{
+		  width: 240px;
+		  height: 240px;
+		  margin: auto;
+		  display: block;
+		  opacity: 0;
+		  z-index: 10;
+		  position: absolute;
+		  top: 0;
+	 }
+	 .yc-add-video__control{
+		  position: absolute;
+		  z-index: 1;
+		  top: 0;
+		  width: 240px;
+		  height: 240px;
+		  border: 3px solid $gray-lighter;
+		  border-radius: $border-radius-sm;
+		  text-align: center;
+		  display: table;
+		  overflow: hidden;
+		  cursor: pointer;
+		  background-color: $gray-lightest;
+		  &:before{
+			   content: '+';
+			   cursor:no-drop;
+			   font-weight: bold;
+			   font-size: 2rem;
+			   position: absolute;
+			  top: 36%;
+			  right: 45%;
+			   color: $brand-primary;
+		  }
+
+
+		  i{
+			   color: $brand-primary;
+			   display: table-cell;
+			   vertical-align: middle;
+		  }
+	 }
+}
+.inputPhone{
+	label{
+		width: 100%;
+	}
+	.lada{
+		width: 54px;
+		display: inline-block;
+		text-align: center;
+		height: 40px;
+		font-size: 1.3rem;
+		color: $gray-light;
+	}
+	input{
+		width: calc(100% - 55px);
+		float: right;
+	}
+}
+ .rw-input{
+	 &::placeholder {
+	   color: $gray-lighter!important;
+	   font-weight: bold;
+	   // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+	   opacity: 1;
+	 }
+ }
+.rw-datetimepicker, .rw-multiselect, .rw-combobox .rw-input, .rw-datetimepicker , .rw-numberpicker, .rw-dropdown-list {
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	padding: 0;
+	font-size: 1rem;
+	line-height: 1.25;
+	background-color: #fff;
+	background-image: none;
+	background-clip: padding-box;
+	border: 2px solid rgba(0, 0, 0, 0.15)!important;
+	border-radius: 0.5rem!important;
+	margin-bottom: 1rem;
+	&:focus, &:hover, &:active{
+		box-shadow:inset 0 0 0 rgba(0,0,0,0)!important;
+		outline: 0 none!important;
+		background-color: rgba(0,0,0,0)!important;
+		border: 2px solid rgba(0, 0, 0, 0.15)!important;
+	}
+
+
+	input, input.rw-input, input.rw-input{
+		box-shadow:inset 0 0 0 rgba(0,0,0,00);
+		border-radius: 0.5rem!important;
+		transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+		&:focus, &:hover, &:active{
+			box-shadow:inset 0 0 0 rgba(0,0,0,0)!important;
+			outline: 0 none!important;
+			background-color: rgba(0,0,0,0)!important;
+			border-color:rgba(0,0,0,0)!important;
+		}
+	}
+}
+
+.form-control{
+	color: $gray-dark!important;
+	&.invalidInputForm{
+		border-color:  $brand-danger;
+	}
+}
+.rw-placeholder{
+	color: $gray-lighter !important;
+}
+
+.yc-formAlert{
+	font-weight: bold;
+	color: $brand-danger;
+	display: none;
+	&.invalidInputForm{
+		display: block;
+	}
+}
+.yc-formAlert__info{
+	color: $gray;
+	text-align: center;
+}
+.yc-wrongUserPass_icon{
+	color: $brand-warning;
+	font-size: 3rem;
+	margin: .8rem auto ;
+	width: 100%;
+	text-align: center;
+}
+.yc-recoveryform-container{
+	.yc-email-sended{
+		display: none;
+		text-align: center;
+		.yc-email-sended__check{
+			color: $brand-success;
+			font-size: 3rem;
+			margin: 1rem auto ;
+
+		}
+	}
+	&.okInputForm{
+		.form-group{
+			display: none;
+		}
+		.btn-block{
+			display: none;
+		}
+
+		.yc-email-sended{
+			display: block;
+		}
+	}
+}
+.yc-recoveryPasword{
+	width: 100%;
+	max-width: 800px;
+
+	.yc-recoverycontainer{
+		background-color: #fff;
+		border-radius: $border-radius-sm;
+		padding: 2rem;
+
+	}
+	.btn-block{
+		margin: 1rem 0;
+	}
+}
+.yc-fileField-content{
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+
+}
+.yc-CV-render{
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	margin: 1rem 0;
+	padding: .5rem;
+	border-radius: .4rem;
+	cursor: pointer;
+	@include transition($transition-fade);
+	&:hover{
+		.fa-cloud-upload{
+			color: $brand-primary;
+		}
+	}
+
+	.yc-fileField-content__icons{
+		padding: 0 .6rem;
+		i{
+			margin: 0 .5rem;
+			&:hover{
+				color: $brand-primary;
+			}
+		}
+	}
+
+	.fa-file-pdf-o{
+		color: #fff;
+		background-color: #F2594B;
+		border-radius: .3rem .8rem .3rem .3rem;
+		font-size: 1.8rem;
+		padding: .15rem;
+	}
+	span{
+		vertical-align: text-bottom;
+		margin: .5rem;
+	}
+	.form-group{
+		width: calc(100% - 100px);
+		top: 0;
+		right: 0;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		label{
+			display: none;
+		}
+
+		.form-control-file{
+			cursor: pointer;
+		}
+
+
+	}
+}

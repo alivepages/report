@@ -1,0 +1,362 @@
+//checkboxes
+ul.chips-list{
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0;
+	li{
+		display: inline-block;
+	}
+}
+
+.radioSwitch{
+	display: inline-block;
+	vertical-align: text-bottom;
+
+	&:first-child{
+		border-radius: $border-radius-sm 0 0 $border-radius-sm;
+		border-right: 2px solid $gray-lightest;
+		overflow: hidden;
+	}
+	&:last-child{
+		border-radius:0 $border-radius-sm $border-radius-sm 0 ;
+		overflow: hidden;
+		border-left: 2px solid $gray-lightest;
+	}
+	input{
+		position: absolute;
+		display: none;
+	}
+
+	label{
+		background-color:$gray-lighter;
+		margin: 0;
+		color: $gray;
+		padding: .5rem;
+		font-size: .8rem;
+		font-weight: bold;
+		cursor: pointer;
+
+		&:hover{
+			opacity: .8;
+		}
+	}
+	input[type="radio"]:checked + label{
+		background-color: $brand-primary;
+		color: #fff;
+	}
+
+}
+.yc-switch-Experience{
+	cursor: pointer;
+	.yc-switch-element{
+		display: inline-block;
+		margin: .3rem;
+	}
+	label{
+		color: $gray;
+		position: relative;
+		&::before{
+			content: "";
+			float: left;
+			height: 20px;
+			width:  20px;
+			border-radius: 50%;
+			border: 3px solid $gray-lighter;
+			position: relative;
+		}
+		&::after{
+			content: "";
+			height: 10px;
+			width:  10px;
+			left: 5px;
+			top:5px;
+
+			border-radius: 50%;
+			background-color: #fff;
+			position: absolute;
+		}
+	}
+	input[type="radio"]:checked + label{
+		&::before{
+			border: 3px solid $brand-primary;
+		}
+		&::after{
+			background-color: $brand-primary;
+		}
+	}
+	input{
+		display: none;
+	}
+
+
+}
+
+.yc-chips-checkBoxes{
+	.yc-chipsItem{
+		display: inline-block;
+		margin: .5rem;
+	}
+	.yc-chips-checkBoxes__label{
+		cursor: pointer;
+		padding: .5rem .8rem;
+		border: 2px solid $brand-primary;
+		border-radius: $border-radius;
+
+	}
+	input[type="checkbox"]{
+		position: absolute;
+		opacity: 0;
+		width: 100%;
+		height: 52px;
+	}
+	input[type="checkbox"]:checked + .yc-chips-checkBoxes__label{
+		background-color: $brand-primary;
+		color: #fff;
+	}
+
+
+}
+input.checkboxYooin[type="checkbox"]{
+     display: none;
+}
+
+
+input.checkboxYooin[type="checkbox"] + label{
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 34px;
+    position: relative;
+    vertical-align: middle;
+}
+
+input.checkboxYooin[type="checkbox"]:checked + label{
+    backface-visibility: hidden;
+    animation: checked 200ms ease 1;
+    color: $brand-primary;
+}
+input.checkboxYooin[type="checkbox"]:checked + label:before{
+       opacity: 1;
+}
+input.checkboxYooin[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    top: 9px;
+    left: 11px;
+    border: 2px solid $brand-primary;
+    opacity: 0;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input.checkboxYooin[type="checkbox"] + label:after {
+     content: '';
+     position: absolute;
+     width: 20px;
+     height: 20px;
+     top: 3px;
+     left: 5px;
+     border: 2px solid $brand-primary;
+     border-radius: 5px;
+
+}
+
+input.checkboxYooin[type="checkbox"] + label:hover:before {
+    border-color:$brand-primary;
+    opacity: .7;
+}
+input.checkboxYooin[type="checkbox"]:checked + label:before {
+    border-color: $brand-primary;
+}
+.yc-checkbox-chips{
+     display: inline-block;
+     margin: .5rem;
+     position: relative;
+     cursor: pointer;
+     input.yc-checkboxYooin__chip[type="checkbox"]{
+          display: none;
+          cursor: pointer;
+     }
+     input.yc-checkboxYooin__chip[type="checkbox"] + label{
+          content: '';
+               cursor: pointer;
+              width: 100%;
+              height: 35px;
+              top: 0;
+              left: 0;
+              padding: .2rem 2rem;
+              border: 2px solid $brand-primary;
+              border-radius: $border-radius;
+               margin-bottom: 0;
+               color: $brand-primary;
+     }
+
+     input.yc-checkboxYooin__chip[type="checkbox"]:checked + label{
+         backface-visibility: hidden;
+         animation: checked 200ms ease 1;
+         color: #fff;
+         background-color: $brand-primary;
+     }
+     input.yc-checkboxYooin__chip[type="checkbox"]:checked + label:before{
+            opacity: 1;
+     }
+     input.yc-checkboxYooin__chip[type="checkbox"] + label:before {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height:35px;
+         top: 0;
+         left: 0;
+         border: 2px solid $brand-primary;
+         opacity: 0;border-radius: $border-radius;
+     }
+
+     input.yc-checkboxYooin__chip[type="checkbox"] + label:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 35px;
+          top: 0;
+          left: 0;
+          border: 2px solid $brand-primary;
+          border-radius: $border-radius;
+
+     }
+
+     input.yc-checkboxYooin__chip[type="checkbox"] + label:hover:before {
+         border-color:$brand-primary;
+         opacity: .7;
+     }
+     input.yc-checkboxYooin__chip[type="checkbox"]:checked + label:before {
+         border-color: $brand-primary;
+     }
+}
+
+//Radioboxes
+
+input.radioYooin[type="radio"]{
+     display: none;
+}
+
+input.radioYooin[type="radio"] + label{
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 34px;
+    position: relative;
+    vertical-align: middle;
+}
+input.radioYooin[type="radio"]:checked + label{
+    backface-visibility: hidden;
+    animation: checked 200ms ease 1;
+    color: $brand-primary;
+}
+
+input.radioYooin[type="radio"]:checked + label:before{
+       opacity: 1;
+}
+input.radioYooin[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 9px;
+    left: 11px;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: $brand-primary;
+}
+
+input.radioYooin[type="radio"] + label:after {
+     content: '';
+     position: absolute;
+     width: 20px;
+     height: 20px;
+     top: 3px;
+     left: 5px;
+     border: 2px solid $brand-primary;
+     border-radius: 50%;
+
+}
+
+input.checkboxYooin[type="checkbox"] + label:hover:before {
+    border-color:$brand-primary;
+    opacity: .7;
+}
+input.checkboxYooin[type="checkbox"]:checked + label:before {
+    border-color: $brand-primary;
+}
+
+.yc-radiobox-chips{
+     display: inline-block;
+     margin: .5rem;
+     input.radioYooin[type="radio"]{
+          display: none;
+     }
+
+     input.radioYooin[type="radio"] + label{
+          cursor: pointer;
+          display: inline-block;
+          margin: 0;
+          height: 35px;
+          padding: .3rem 2rem;
+          text-align: center;
+          position: relative;
+          vertical-align: middle;
+          color: $brand-primary;
+
+     }
+     input.radioYooin[type="radio"]:checked + label{
+         backface-visibility: hidden;
+         animation: checked 200ms ease 1;
+         color: #fff;
+         background-color:$brand-primary;
+         border-radius: $border-radius;
+     }
+
+     input.radioYooin[type="radio"]:checked + label:before{
+            opacity: 1;
+            color: #fff;
+            z-index: -.5;
+     }
+     input.radioYooin[type="radio"] + label:before {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 35px;
+         top: 0;
+         color: #fff;
+         z-index: -1;
+         left: 0;
+         border: 2px solid $brand-primary;
+         border-radius: $border-radius;
+     }
+
+     input.radioYooin[type="radio"] + label:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 35px;
+          top: 0;
+          left: 0;
+          border: 2px solid $brand-primary;
+          border-radius: $border-radius;
+
+     }
+
+     input.checkboxYooin[type="checkbox"] + label:hover:before {
+         border-color:$brand-primary;
+         opacity: .7;
+     }
+     input.checkboxYooin[type="checkbox"]:checked + label:before {
+         border-color: $brand-primary;
+     }
+}

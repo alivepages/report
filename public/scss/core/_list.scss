@@ -1,0 +1,80 @@
+.yc_experience-History_list{
+	list-style-type: none;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0;
+	&:first-child{
+		border-top: 0 solid #dce0e2;
+	}
+	li{
+		&:first-child{
+			border-top: 0 solid #dce0e2;
+		}
+		border-top: 2px solid #dce0e2;
+		padding: 0 0 1rem;
+	}
+}
+
+.tag-list{
+	 width: 100%;
+	 .react-tags{
+		  @include prefix((
+			   display: flex,
+				flex-direction: column,
+		  ), webkit moz ms o);
+
+		  input{
+			   @include prefix((
+					order: 1,
+			   ), webkit moz ms o);
+			   padding: $input-btn-padding-y $input-btn-padding-x;
+			   font-size: $font-size-base;
+			   line-height: $input-btn-line-height;
+			   color: $input-color;
+			   background-color: $input-bg;
+			   background-image: none;
+			   background-clip: padding-box;
+			   border: $input-btn-border-width solid transparent;
+			   margin:0 auto 1rem;
+			   width: 100%;
+			   @if $enable-rounded {
+				 // Manually use the if/else instead of the mixin to account for iOS override
+				 border-radius: $input-border-radius;
+			   } @else {
+				 // Otherwise undo the iOS default
+				 border-radius: 0;
+			   }
+
+			   &:focus, &:active{
+					 outline: none;
+			   }
+		  }
+		  .react-tags__container{
+			   @include prefix((
+					order: 2,
+					column-count: 2
+			   ), webkit moz ms o);
+			   padding: 0;
+			   width: 100%;
+			   margin: auto;
+			   li{
+					color: $gray;
+					padding: 0 0;
+					font-size: .9rem;
+					margin: 0 1.5rem;
+					width: 50%;
+					cursor: pointer;
+
+					a{
+						 margin: .3rem;
+						 font-weight: bold;
+						 color: $gray-lightest;
+					}
+			   }
+		  }
+	 }
+
+
+}

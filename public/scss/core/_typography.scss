@@ -1,0 +1,58 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.font-xs {
+  font-size: .75rem !important;
+}
+
+.font-sm {
+  font-size: .85rem !important;
+}
+
+.font-md {
+  font-size: 1rem !important;
+}
+.font-mdl {
+  font-size: 1.5rem !important;
+}
+
+.font-lg {
+  font-size: 1.8rem !important;
+}
+
+.font-xl {
+  font-size: 2rem !important;
+}
+
+.font-2xl {
+  font-size: 2.5rem !important;
+}
+
+.font-3xl {
+  font-size: 2.75rem !important;
+}
+
+.font-4xl {
+  font-size: 2rem !important;
+}
+
+.font-5xl {
+  font-size: 2.5rem !important;
+}
+
+
+@each $variant, $color in (primary: $brand-primary, link: $brand-accent, wizard: $gray-lighter, gray: $gray, graylight: $gray-light, graylighter: $gray-lighter, graylightest: $gray-lightest, success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger, white: #fff ) {
+	.color-#{$variant} {
+		color: $color!important;
+	}
+}
+
+a{
+	cursor: pointer;
+	&:hover{
+		opacity: .8;
+	}
+}

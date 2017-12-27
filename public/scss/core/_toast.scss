@@ -1,0 +1,10 @@
+
+@each $variant, $color in (primary: $brand-primary,  wizard: $gray-lighter, secondary: $gray-lighter, success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger) {
+  .yc-toastContainer__#{$variant} {
+     width:calc(100% + 60px);
+     min-height: 30px;
+     background-color: $color;
+     color: #fff;
+     margin-left: -30px;
+  }
+}

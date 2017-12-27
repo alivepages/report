@@ -1,0 +1,20 @@
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger,
+.bg-inverse {
+  color: #fff;
+}
+
+@each $variant, $color in (primary: $brand-primary,  wizard: $gray-lighter,  graylight: $gray, success: $brand-success, white:#fff, info: $brand-info, warning: $brand-warning, danger: $brand-danger, linkedin: $linkedin, evaluatest:$evaluatest) {
+	.bg-color-#{$variant} {
+		background-color: $color;
+	}
+}
+
+@each $variant, $color in (online: $gray-lightest,  graylight: $gray) {
+	.bg-color-light-#{$variant} {
+		background-color: $color;
+	}
+}

@@ -1,0 +1,456 @@
+.card {
+  margin-bottom: 1.5 * $spacer;
+  border-radius: $border-radius-sm;
+}
+
+.card-body {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  padding: $card-spacer-x;
+}
+
+.yc-recoveryCard{
+	padding: 2rem;
+}
+.card-overlay{
+     width: 100%;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     @include gradient($from-color, $middle-color);
+
+}
+.card-extra-elements{
+     padding: 1rem 0  0 0 ;
+     text-align: center;
+
+     i{
+          text-align: center;
+     }
+}
+.card-buttons{
+     width: 101%;
+
+     .card-button-half{
+          &:first-child{
+               border-right: 2px solid $gray-lighter;
+          }
+          width: 50%;
+          height: 50px;
+          display: table;
+          float: left;
+          text-align: center;
+          vertical-align: middle;
+          cursor: pointer;
+          span{
+               display: table-cell;
+               vertical-align: middle;
+               background-color: $gray-lightest;color: $gray;
+               &:hover{
+                    opacity: .8;
+               }
+          }
+     }
+}
+.card-top-controls{
+
+     div{
+          padding: 1rem;
+          i, span{
+               color: #fff !important;
+          }
+          i{
+               display: inline-block;
+               float: left;
+               margin: .2rem .5rem;
+               cursor: pointer;
+               transition:$hover-transition-cubic-bezier;
+
+               &:hover{
+                    opacity: .6;
+               }
+          }
+     }
+}
+.card-bottom-controls{
+     position: absolute;
+     width: 100%;
+     bottom: 0;
+     .item{
+          width: 50%;
+          display: inline-block;
+          text-align: right;
+          &:first-child{
+               text-align: left;
+          }
+     }
+     div{
+          padding: 1rem;
+          vertical-align: bottom;
+
+          p, span{
+               color: #fff !important;
+          }
+          .font-xl{
+               font-weight: bold;
+          }
+     }
+}
+.userCard{
+     overflow: hidden;
+      border-radius: $border-radius-sm;
+
+     .card-header,.card-block {
+          padding: 0!important;
+     }
+
+}
+.card-header {
+     position: relative;
+     padding: 1rem;
+
+
+  .icon-bg {
+    display: inline-block;
+    padding: $card-spacer-y $card-spacer-x !important;
+    margin-top: -$card-spacer-y;
+    margin-right: $card-spacer-x;
+    margin-bottom: -$card-spacer-y;
+    margin-left: -$card-spacer-x;
+    line-height: inherit;
+    color: $card-icon-color;
+    vertical-align: bottom;
+    background: $card-icon-bg;
+    border-right: $card-border-width solid $card-border-color;
+  }
+
+  .nav.nav-tabs {
+    margin-top: -$card-spacer-y;
+    margin-bottom: -$card-spacer-y;
+    border-bottom: 0;
+
+    .nav-item {
+      border-top: 0;
+    }
+
+    .nav-link {
+      padding: $card-spacer-y $card-spacer-x / 2;
+      color: $text-muted;
+      border-top: 0;
+
+      &.active {
+        color: $body-color;
+        background: #fff;
+      }
+    }
+  }
+
+  &.card-header-inverse {
+    color: #fff;
+  }
+
+  @each $variant, $color in (primary: $brand-primary, secondary: $gray-lighter, success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger) {
+    &.card-header-#{$variant} {
+      margin: -1px -1px 0;
+      background: $color;
+      border-bottom: 1px solid $color;
+    }
+  }
+
+  .btn {
+    margin-top: - $input-btn-padding-y;
+  }
+  .btn-sm {
+    margin-top: - $input-btn-padding-y-sm;
+  }
+  .btn-lg {
+    margin-top: - $input-btn-padding-y-lg;
+  }
+}
+//
+.card-company-info{
+     width: 100%;
+     padding: $card-spacer-x;
+     img{
+          width: 55px;
+          float: left;
+     }
+     .card-company-principalinfo{
+          float: right;
+          width: calc(100% - 55px);
+          p, a{
+               margin: 0;
+          }
+          p{
+               font-weight: bold;
+          }
+     }
+}
+.card-footer {
+
+  ul {
+    display: table;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    table-layout: fixed;
+
+    li {
+      display: table-cell;
+      padding: 0 $card-spacer-x;
+      text-align: center;
+    }
+  }
+}
+
+
+//
+// Background variations
+//
+
+@mixin card-variant($color) {
+  background-color: $color;
+
+  .card-header {
+    border-color: darken($color,5%);
+  }
+
+  .card-header, .card-footer {
+    background-color: darken($color,5%);
+    //border: 0;
+  }
+}
+
+@each $variant, $color in (primary: $brand-primary, secondary: $gray-lighter, success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger) {
+  .card-#{$variant} {
+    @include card-variant($color)
+  }
+}
+
+.card-inverse {
+  color: #fff;
+
+  .text-muted {
+    color: rgba(255,255,255,.6) !important;
+  }
+
+}
+
+[class*="card-outline-"] {
+  .card-block {
+    background: #fff !important;
+  }
+
+  &.card-outline-top {
+    border-top-width: 2px;
+    border-right-color: $border-color;
+    border-bottom-color: $border-color;
+    border-left-color: $border-color;
+  }
+}
+
+// Cards with color accent
+.card-accent-primary {
+  @include card-accent-variant($btn-primary-bg);
+}
+.card-accent-secondary {
+  @include card-accent-variant($btn-secondary-border);
+}
+.card-accent-info {
+  @include card-accent-variant($btn-info-bg);
+}
+.card-accent-success {
+  @include card-accent-variant($btn-success-bg);
+}
+.card-accent-warning {
+  @include card-accent-variant($btn-warning-bg);
+}
+.card-accent-danger {
+  @include card-accent-variant($btn-danger-bg);
+}
+
+// Card Actions
+.card-header {
+  > i {
+    margin-right: $spacer / 2;
+  }
+  .card-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    //height: inherit;
+
+    a, button {
+      display: block;
+      float: left;
+      width: 50px;
+      padding: $card-spacer-y 0;
+      margin: 0 !important;
+      color: $body-color;
+      text-align: center;
+      background: transparent;
+      border: 0;
+      border-left: 1px solid $border-color;
+      box-shadow: 0;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      [class^="icon-"], [class*=" icon-"] {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      i {
+        display: inline-block;
+        transition: .4s;
+      }
+
+      .r180 {
+        transform: rotate(180deg);
+      }
+    }
+
+    .input-group {
+      width: 230px;
+      margin: 6px;
+
+      .input-group-addon {
+        background: #fff;
+      }
+
+      input {
+        border-left: 0;
+      }
+    }
+  }
+}
+
+.card-full {
+  margin-top: - $spacer;
+  margin-right: - $grid-gutter-width-base / 2;
+  margin-left: - $grid-gutter-width-base / 2;
+  border: 0;
+  border-bottom: $card-border-width solid $border-color;
+}
+
+@include media-breakpoint-up(sm) {
+  .card-columns {
+
+    &.cols-2 {
+      column-count: 2;
+    }
+  }
+}
+
+.card {
+  &.drag, .drag {
+    cursor: move;
+  }
+}
+
+.card-placeholder {
+  background: rgba(0,0,0,.025);
+  border: 1px dashed $gray-light;
+}
+.yc-profileHeader-card{
+     border-bottom: 2px solid $gray-lighter;
+     padding:0 0 .5rem;
+     margin: 0 0 1rem;
+      h5{
+           font-weight: bold;
+           width: auto;
+           display: inline-block;
+           font-size: 1rem;
+            text-transform: capitalize;
+      }
+}
+.yc-experience-jobCompanyIcon{
+     width: 50px;
+     display: inline-block;
+}
+.yc-experience-jobCompanyIndustry{
+     margin: 0 .5rem;
+     opacity: .7;
+}
+.yc-experience-jobCompany-usertype{
+     opacity: .7;
+}
+.yc-experience-jobCompany-userJob{
+     margin: 0;
+}
+.yc-experience-jobCompanyInfo{
+     width: calc( 100% - 52px);
+     display: inline-block;
+     vertical-align: top;
+     .yc-experience-jobCompanyName{
+          font-weight: bold;
+          width: auto;
+          display: inline-block;
+     }
+}
+.yc-preferences-chips{
+     padding:0 .5rem;
+}
+.yc-user-basicInfo__container{
+     @media (max-width: 767px){
+          text-align: center;
+          width: 100%;
+     }
+     width: calc( 100% - 50px ) ;
+     display: inline-block;
+     .yc-user-basicInfo__name{
+          width: auto;
+          display: inline-block;
+          font-weight: bold;
+          margin: 0 .5rem 0 0;
+     }
+     .yc-user-basicInfo__age{
+          width: 100%;
+          opacity: .7;
+          margin: 0 0 1rem;
+
+     }
+     .yc-user-basicInfo__job{
+          width: auto;
+          display: block;
+          opacity: .7;
+     }
+     .yc-user-basicInfo__description{
+          font-size: .9rem;
+          opacity: .8;
+
+     }
+}
+.yc-user-basicInfo__btns{
+     width: 47px;
+     display: inline-block;
+     vertical-align: top;
+     text-align: right;
+     @media (max-width: 767px){
+          position: absolute;
+          right: 0;
+     }
+}
+.yc-user-basicInfo__extraData{
+     text-align: center;
+     .fa{
+          width: 100%;
+          color: $gray;
+     }
+     span{
+          width: 100%;
+          display: block;
+          font-size: .8rem;
+          color: $gray;
+          margin: .6rem auto;
+
+     }
+     .yc-user-basicInfo__info{
+          color: $gray-light;
+          line-height: .7rem;
+     }
+
+}

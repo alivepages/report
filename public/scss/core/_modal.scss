@@ -1,0 +1,71 @@
+@each $variant, $color in (primary: $brand-primary,  wizard: $gray-lighter, secondary: $gray-lighter, success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger) {
+  .modal-#{$variant} {
+
+    .modal-content {
+      border-color: $color;
+    }
+
+    .modal-header {
+      color: #fff;
+      background-color: $color;
+    }
+  }
+}
+
+.yc-modalAlert{
+    position: relative;
+    .modal-content{
+        max-width: 350px;
+        margin: auto;
+    }
+    .yc-modalAlert__close{
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        color: $gray-lighter;
+        cursor: pointer;
+
+        &:hover{
+            color: $brand-primary;
+        }
+
+    }
+    .modal-header{
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+
+        .modal-title{
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+    }
+    .modal-body{
+        width: 90%;
+        margin: auto;
+    }
+}
+.yc-modalAlternative{
+	.modal-content{
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		border-radius: 0;
+		.modal-body{
+			padding: 0;
+		}
+	}
+	.yc-modalAlternative__close{
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        color: $gray-lighter;
+        cursor: pointer;
+
+        &:hover{
+            color: $brand-primary;
+        }
+
+    }
+}

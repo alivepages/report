@@ -1,0 +1,144 @@
+.yc-profile_avatarContainer{
+	width: 200px;
+	display: inline-block;
+	float: left;
+	@media (max-width: 900px) {
+		width: 100%!important;
+	}
+}
+.blur{
+	@include prefix((
+		filter:blur(5px)
+	), webkit moz ms o);
+}
+.stickElement{
+	.yc-profileSidebar-Content{
+		position: sticky;
+		position:-webkit-sticky;
+	}
+}
+.yc-profile_activities_list{
+	list-style-type: disc;
+	-webkit-margin-before: .5em;
+	-webkit-margin-after: .5em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 20px;
+	li{
+		font-size: .8rem;
+	}
+}
+.yc-profile-block_title{
+	display: inline-block;
+	width: auto;
+	font-weight: bold;
+	margin: .2rem 0 0;
+}
+.yc-profile-block_functionalArea{
+	margin: 0 .5rem;
+}
+.yc-profile-JobTitle{
+	opacity: .8;
+	margin: .2rem 0 0;
+}
+.blockArray{
+	&:last-child{
+		border-bottom: 0 solid $gray-lighter;
+	}
+	border-bottom: 1px solid $gray-lighter;
+	padding: 1rem;
+}
+.actualJob{
+	margin: .1rem;
+	color: $gray;
+	font-size: .9rem;
+}
+.yc-profile-JobLevely{
+
+}
+.yc-profile_Info{
+	width: calc( 100% - 201px );
+	display: inline-block;
+	@media (max-width: 900px) {
+		width: 100%!important;
+		text-align: center;
+		margin: 1rem;
+	}
+}
+.yc-bio{
+	word-break: break-all;
+	font-size: .9rem;
+	color: $gray;
+	margin: 0;
+}
+.yc-profile-sidebar{
+		overflow: hidden;
+	.yc-profile-card__editLink{
+		border-bottom: 2px solid $gray-lighter;
+		padding: 1rem .8rem;
+		color: $gray!important;
+		line-height: 1rem;
+		font-size: .9rem;
+		overflow: hidden;
+		&.active{
+			border-right:  3px solid $brand-primary;
+			color: $brand-primary!important;
+		}
+	}
+	.yc-profile-card__Link{
+		width: 100%;
+		border-bottom: 2px solid $gray-lighter;
+		padding: 1rem .8rem;
+		color: $gray!important;
+		line-height: 1rem;
+		font-size: .9rem;
+		overflow: hidden;
+		&.active{
+			border-right:  3px solid $brand-primary;
+			color: $brand-primary!important;
+		}
+	}
+
+}
+.yc-profile-card__header{
+	width:100%;
+	border-bottom:2px solid $gray-lighter;
+	padding:.5rem;
+	.yc-profile-card__editLink{
+		position: absolute;
+		right: 2rem;
+		top:  2rem;
+		font-size: .9rem;
+		font-weight: bold;
+		cursor: pointer;
+		&:hover{
+			opacity: .8;
+		}
+
+	}
+	h5{
+		 color: $gray;
+	 }
+}
+.yc-Details{
+	min-height: 60px;
+	.yc-Details-item{
+		display: inline-block;
+	}
+	i{
+		font-size: 1rem;
+		color: $gray;
+	}
+	p{
+		color: $gray-light;
+		font-size: .8rem;
+		margin: 0;
+	}
+	.yc-Details-title{
+		color: $gray;
+		font-size: .8rem;
+	}
+	.yc-bio{
+		word-break: normal;
+	}
+}

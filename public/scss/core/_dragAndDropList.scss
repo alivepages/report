@@ -1,0 +1,50 @@
+.yc-drag-list{
+     width: 320px;
+     .react-grid-item{
+          cursor: grab;
+          cursor: -webkit-grab;
+
+
+          &:focus, &:active, &.react-grid-item.react-draggable.cssTransforms.react-resizable{
+               cursor: grabbing;
+               cursor: -webkit-grabbing;
+
+          }
+
+          .yc-drag-list__number{
+               background-color: $gray-light;
+               color: #fff;
+               width: 40px;
+               text-align: center;
+               border-radius:$borderXs-radius;
+               display: inline-block;
+               padding: .5rem;
+          }
+          .yc-drag-list__text{
+
+               position: relative;
+               background-color: #fff;
+               display: inline-block;
+               padding: .5rem .6rem;
+               margin: 0 0 0 -10px;
+               width: calc(100% - 45px);
+               border-radius: $borderXs-radius;
+               @include prefix((
+                    box-shadow: $boxshadow-sm,
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1),
+               ), webkit moz ms o);
+          }
+          .yc-drag-list__control{
+               position: absolute;
+               right: 8px;
+               top: 5px;
+               .yc-drag-list__dot{
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: $gray-lighter;
+                    margin: .3rem;
+               }
+          }
+     }
+}

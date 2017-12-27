@@ -1,0 +1,166 @@
+
+.chips-row{
+	 display: inline-block;
+	 width: 100%;
+	 padding: .5rem 0;
+}
+.chip, .chip-xs,.chip-s, .chip-md, .chip-lg{
+	 cursor: pointer;
+	 &:hover{
+		  opacity: .6;
+	 }
+	 &.cancelLink{
+		 cursor:default;
+		 &:hover{
+			 opacity: 1;
+		 }
+	 }
+}
+
+.chip{
+	 background-color: $gray-lighter;
+	 color: $gray;
+	 padding: .5rem .8rem;
+	 font-size: .9rem;
+	 border-radius: $border-radius;
+	 margin: .5rem;
+	 display: inline-block;
+}
+
+.chip-lg{
+	 background-color: $gray-lighter;
+	 color: $gray;
+	 padding: .5rem .8rem;
+	 font-size: 1.3rem;
+	 border-radius: $border-radius;
+	 margin: .5rem;
+	 display: inline-block;
+}
+.chip-md{
+	 background-color: $gray-lighter;
+	 color: $gray;
+	 padding: .5rem .8rem;
+	 font-size: .8rem;
+	 border-radius: $border-radius;
+	 margin: .5rem;
+	 display: inline-block;
+}
+.chip-s{
+	 display: inline-block;
+	 background-color: $gray-lighter;
+	 color: $gray;
+	 padding: .2rem .5rem;
+	 font-size: .7rem;
+	 font-weight: 700;
+	 border-radius: $border-radius;
+	 margin: .2rem;
+}
+.chip-xs{
+	 display: inline-block;
+	 background-color: $gray-lighter;
+	 color: $gray;
+	 padding: .2rem .4rem;
+	 font-size: .6rem;
+	 font-weight: 700;
+	 border-radius: $border-radius;
+	 margin: .5rem;
+}
+@each $variant, $chipColor in ( primary: $brand-primary, secondary: $brand-accent, success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger){
+	 .chip-color-#{$variant}{
+		  &.chip, &.chip-xs,&.chip-s, &.chip-md, &.chip-lg{
+			   background-color: $chipColor;
+			   color: #fff;
+		  }
+	 }
+}
+@each $variant, $chipColor in ( whiteColor: #fff, grayLight:$gray-light, grayLighter: $gray-lighter, grayLightest: $gray-lightest){
+	 .grayChip-color-#{$variant}{
+		  &.chip, &.chip-xs,&.chip-s, &.chip-md, &.chip-lg{
+			   background-color: $chipColor;
+			   color: $gray;
+		  }
+	 }
+}
+
+.tag-chips{
+	 width: 100%;
+	 .react-tags{
+		  @include prefix((
+			   display: flex,
+				flex-direction: column,
+		  ), webkit moz ms o);
+
+		  input{
+			   @include prefix((
+					order: 1,
+			   ), webkit moz ms o);
+			   padding: $input-btn-padding-y $input-btn-padding-x;
+			   font-size: $font-size-base;
+			   line-height: $input-btn-line-height;
+			   color: $input-color;
+			   background-color: $input-bg;
+			   background-image: none;
+			   background-clip: padding-box;
+			   border: $input-btn-border-width solid $input-border-color;
+			   margin:0 auto 1rem;
+			   width: 100%;
+			   max-width: 600px;
+			   @if $enable-rounded {
+				 // Manually use the if/else instead of the mixin to account for iOS override
+				 border-radius: $input-border-radius;
+			   } @else {
+				 // Otherwise undo the iOS default
+				 border-radius: 0;
+			   }
+
+			   &:focus, &:active{
+					 outline: none;
+			   }
+		  }
+		  .react-tags__container{
+			   @include prefix((
+					order: 2,
+			   ), webkit moz ms o);
+			   list-style: none;
+			   padding: 0;
+			   text-align: center;
+			   width: 100%;
+			   max-width: 600px;
+			   margin: auto;
+			   li{
+					background-color: $brand-primary;
+					color: $gray;
+					padding: .5rem .8rem;
+					font-size: .9rem;
+					border-radius: $border-radius;
+					margin: .5rem;
+					display: inline-block;
+					cursor: pointer;
+					color: #fff;
+					a{
+						 margin: .3rem;
+						 font-weight: bold;
+					}
+			   }
+		  }
+	 }
+
+
+}
+
+.rw-multiselect-taglist>li{
+	background-color: $brand-primary!important;
+	color: $gray!important;
+	font-size: .9rem!important;
+	border-radius: $border-radius!important;
+	margin: .5rem!important;
+	display: inline-block!important;
+	white-space: normal!important;
+	cursor: pointer!important;
+	color: #fff!important;
+	border: 1px solid transparent!important;
+	a{
+		 margin: .3rem;
+		 font-weight: bold;
+	}
+}

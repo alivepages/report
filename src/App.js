@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CandidatesReport from './components/CandidatesReport';
+import CreateVacant from './client/components/createVacant/Vacant';
 
 class App extends Component {
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
       <div className="ye-full-app-body">
         <div className="container-fluid">
           <div className="ye-padding-navbar-fixed testDesign">
-            <CandidatesReport/>
+            <CreateVacant/>
           </div>
         </div>
       </div>

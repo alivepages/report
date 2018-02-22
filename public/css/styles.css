@@ -10578,7 +10578,7 @@ input.checkboxYooin[type="checkbox"]:checked + label:before {
   &:hover::after {
     border-top: 4px solid $brand-accent;
     border-left-width: 4px;
-    border-right-width: 4px; 
+    border-right-width: 4px;
     transform: rotate(270deg);
     transition: transform 0.4s linear 0s,
                 border-left-width 0s linear 0.35s;
@@ -15919,3 +15919,24 @@ input.rw-select-list-input {
     font-family: 'FontAwesome'; }
 
 /*# sourceMappingURL=styles.css.map */
+
+
+.ye-navbar-fixed-right{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  z-index: 1030;
+}
+
+.ye-navbar-fixed-right .navbar-header {
+  background-color: #0c7bea;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.ye-navbar-fixed-right .navbar-brand {
+  color: white;
+}

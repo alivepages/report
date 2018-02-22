@@ -13488,7 +13488,7 @@ exports['default'] = Base;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * 
+ *
  */
 
 function makeEmptyFunction(arg) {
@@ -20726,7 +20726,7 @@ module.exports = EventListener;
  * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
- * 
+ *
  */
 
 /*eslint-disable no-self-compare */
@@ -20798,7 +20798,7 @@ module.exports = shallowEqual;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * 
+ *
  */
 
 var isTextNode = __webpack_require__(376);
@@ -21730,7 +21730,7 @@ function wrapMapToPropsConstant(getConstant) {
 // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
 // to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
 // whether mapToProps needs to be invoked when props have changed.
-// 
+//
 // A length of one signals that mapToProps does not depend on props from the parent component.
 // A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
 // therefore not reporting its length accurately..
@@ -21740,16 +21740,16 @@ function getDependsOnOwnProps(mapToProps) {
 
 // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
 // this function wraps mapToProps in a proxy function which does several things:
-// 
+//
 //  * Detects whether the mapToProps function being called depends on props, which
 //    is used by selectorFactory to decide if it should reinvoke on props changes.
-//    
+//
 //  * On first call, handles mapToProps if returns another function, and treats that
 //    new function as the true mapToProps for subsequent calls.
-//    
+//
 //  * On first call, verifies the first result is a plain object, in order to warn
 //    the developer that their mapToProps function is not returning a valid result.
-//    
+//
 function wrapMapToPropsFunc(mapToProps, methodName) {
   return function initProxySelector(dispatch, _ref) {
     var displayName = _ref.displayName;
@@ -27094,7 +27094,7 @@ var UrlCopy = function (_React$Component) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     return {
         copy: function copy(url) {
-            dispatch(getUrlToCopy(url));
+            dispatch(url);
         }
     };
 };
@@ -39447,7 +39447,7 @@ var checkPropTypes = __webpack_require__(101);
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule reactProdInvariant
- * 
+ *
  */
 
 {
@@ -39733,7 +39733,7 @@ var ReactBaseClasses = {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactCurrentOwner
- * 
+ *
  */
 
 /**
@@ -40083,7 +40083,7 @@ var ReactElement_1 = ReactElement;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactDebugCurrentFrame
- * 
+ *
  */
 
 var ReactDebugCurrentFrame = {};
@@ -40448,7 +40448,7 @@ var onlyChild_1 = onlyChild;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * 
+ *
  * @providesModule describeComponentFrame
  */
 
@@ -40463,7 +40463,7 @@ var describeComponentFrame$1 = function (name, source, ownerName) {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule getComponentName
- * 
+ *
  */
 
 function getComponentName$1(instanceOrFiber) {
@@ -41535,7 +41535,7 @@ var getActiveElement = __webpack_require__(155);
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule reactProdInvariant
- * 
+ *
  */
 
 /**
@@ -41545,7 +41545,7 @@ var getActiveElement = __webpack_require__(155);
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule checkReact
- * 
+ *
  */
 
 
@@ -42017,7 +42017,7 @@ var ReactDOMComponentFlags_1 = ReactDOMComponentFlags;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactTypeOfWork
- * 
+ *
  */
 
 var ReactTypeOfWork = {
@@ -42345,7 +42345,7 @@ var ReactGlobalSharedState_1 = ReactGlobalSharedState;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule getComponentName
- * 
+ *
  */
 
 function getComponentName(instanceOrFiber) {
@@ -42378,7 +42378,7 @@ var getComponentName_1 = getComponentName;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactTypeOfSideEffect
- * 
+ *
  */
 
 var ReactTypeOfSideEffect = {
@@ -43424,7 +43424,7 @@ var accumulateInto_1 = accumulateInto;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule forEachAccumulated
- * 
+ *
  */
 
 /**
@@ -44272,7 +44272,7 @@ var dangerousStyleValue_1 = dangerousStyleValue;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * 
+ *
  * @providesModule describeComponentFrame
  */
 
@@ -44619,7 +44619,7 @@ var ReactInvalidSetStateWarningHook_1 = ReactInvalidSetStateWarningHook;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactHostOperationHistoryHook
- * 
+ *
  */
 
 // Trust the developer to only use this with a true check
@@ -45998,7 +45998,7 @@ var assertValidProps_1 = assertValidProps;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule inputValueTracking
- * 
+ *
  */
 
 function isCheckable(elem) {
@@ -46120,7 +46120,7 @@ var inputValueTracking_1 = inputValueTracking;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule isCustomComponent
- * 
+ *
  */
 
 function isCustomComponent(tagName, props) {
@@ -48306,7 +48306,7 @@ var ReactDOMFrameScheduling = {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactFeatureFlags
- * 
+ *
  */
 
 var ReactFeatureFlags = {
@@ -48322,7 +48322,7 @@ var ReactFeatureFlags_1 = ReactFeatureFlags;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactPriorityLevel
- * 
+ *
  */
 
 var ReactPriorityLevel = {
@@ -48845,7 +48845,7 @@ var ReactFiberStack = {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactDebugFiberPerf
- * 
+ *
  */
 
 var ReactDebugFiberPerf = null;
@@ -49446,7 +49446,7 @@ var ReactFiberContext = {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactTypeOfInternalContext
- * 
+ *
  */
 
 var ReactTypeOfInternalContext = {
@@ -49828,7 +49828,7 @@ var ReactFiberErrorLogger = {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactCoroutine
- * 
+ *
  */
 
 // The Symbol used to tag the special React types. If there is no native Symbol
@@ -49916,7 +49916,7 @@ var ReactCoroutine = {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactPortal
- * 
+ *
  */
 
 // The Symbol used to tag the special React types. If there is no native Symbol
@@ -53444,7 +53444,7 @@ var ReactFiberHydrationContext = function (config) {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule ReactFiberInstrumentation
- * 
+ *
  */
 
 // This lets us hook into Fiber to debug what it's doing.
@@ -54799,7 +54799,7 @@ var ReactFiberScheduler = function (config) {
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule getContextForSubtree
- * 
+ *
  */
 
 
@@ -55309,7 +55309,7 @@ var ReactVersion = '16.0.0';
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule findDOMNode
- * 
+ *
  */
 
 
@@ -56074,7 +56074,7 @@ var EventPropagators_1 = EventPropagators;
  * both its text content and its current position in the DOM. Since the
  * browser may natively replace the target node during composition, we can
  * use its position to find its replacement.
- * 
+ *
  *
  */
 var compositionState = {
@@ -56838,7 +56838,7 @@ var BeforeInputEventPlugin_1 = BeforeInputEventPlugin;
  * LICENSE file in the root directory of this source tree.
  *
  * @providesModule isTextInputElement
- * 
+ *
  */
 
 /**
@@ -60204,7 +60204,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
   selectorFactory, which has the signature:
 
     (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
-  
+
   connect passes its args to connectAdvanced as options, which will in turn pass them to
   selectorFactory each time a Connect component instance is instantiated or hot reloaded.
 
@@ -76473,7 +76473,7 @@ var propTypes = _extends({}, Filter.propTypes, {
    * ---
    *
    * Select an item from the list, or input a custom value. The Combobox can also make suggestions as you type.
-  
+
    * @public
    */
 });
@@ -77402,7 +77402,7 @@ var dates = module.exports = {
       case DAY:
         return dates.date(date, dates.date(date) + num)
       case WEEK:
-        return dates.date(date, dates.date(date) + (7 * num)) 
+        return dates.date(date, dates.date(date) + (7 * num))
       case MONTH:
         return monthMath(date, num)
       case DECADE:
@@ -77439,13 +77439,13 @@ var dates = module.exports = {
           date = dates.milliseconds(date, 0);
     }
 
-    if (unit === DECADE) 
+    if (unit === DECADE)
       date = dates.subtract(date, dates.year(date) % 10, 'year')
-    
-    if (unit === CENTURY) 
+
+    if (unit === CENTURY)
       date = dates.subtract(date, dates.year(date) % 100, 'year')
 
-    if (unit === WEEK) 
+    if (unit === WEEK)
       date = dates.weekday(date, 0, firstOfWeek);
 
     return date
@@ -77474,7 +77474,7 @@ var dates = module.exports = {
   max: function(){
     return new Date(Math.max.apply(Math, arguments))
   },
-  
+
   inRange: function(day, min, max, unit){
     unit = unit || 'day'
 
@@ -77492,13 +77492,13 @@ var dates = module.exports = {
   year:           createAccessor('FullYear'),
 
   decade: function (date, val) {
-    return val === undefined 
+    return val === undefined
       ? dates.year(dates.startOf(date, DECADE))
       : dates.add(date, val + 10, YEAR);
   },
 
   century: function (date, val) {
-    return val === undefined 
+    return val === undefined
       ? dates.year(dates.startOf(date, CENTURY))
       : dates.add(date, val + 100, YEAR);
   },
@@ -77506,8 +77506,8 @@ var dates = module.exports = {
   weekday: function (date, val, firstDay) {
       var weekday = (dates.day(date) + 7 - (firstDay || 0) ) % 7;
 
-      return val === undefined 
-        ? weekday 
+      return val === undefined
+        ? weekday
         : dates.add(date, val - weekday, DAY);
   },
 
@@ -77573,7 +77573,7 @@ function monthMath(date, val){
     date = dates.month(date, newMonth)
 
     while (newMonth < 0 ) newMonth = 12 + newMonth
-      
+
     //month rollover
     if ( dates.month(date) !== ( newMonth % 12))
       date = dates.date(date, 0) //move to last of month

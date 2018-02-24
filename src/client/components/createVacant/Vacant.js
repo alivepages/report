@@ -8,7 +8,7 @@ import apiUrl from '../../../utils/api/config';
 // Components
 import Dots from '../Dots';
 import VacantFirstStep from './VacantFirstStep';
-import SideBarCompetences from '../Perfilamiento/SideBarCompetences'
+import SideBarProfiler from '../Perfilamiento/SideBarProfiler'
 import VacantSecondStep from './VacantSecondStep';
 import VacantPublish from './VacantPublish';
 import { RESET } from 'redux-form/lib/actionTypes';
@@ -50,7 +50,7 @@ class Vacant extends React.Component {
 
         return(
             <div className="mb-5">
-                <SideBarCompetences/>
+                <SideBarProfiler/>
                 <Dots total={3} page={page} />
                 <div>
 

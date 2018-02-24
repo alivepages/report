@@ -1120,3 +1120,42 @@
 		}
   }
 }
+
+.ye-perfiling {
+	position: relative;
+}
+
+.ye-perfiling-slider {
+	.rc-slider-rail {
+    height: 15px;
+    background-color: #0c7bea;
+		margin-bottom: 10px;
+	}
+	.rc-slider-track {
+    height: 15px;
+	}
+	.rc-slider-dot {
+		bottom: -8px;
+		margin: 0  5px;
+	}
+	.rc-slider-mark {
+		top: 29px;
+	}
+}
+
+.ye-perfiling-globe {
+		font-size: 24px;
+		color: #208101;
+}
+
+.ye-perfiling-range {
+		font-size: 9px;
+		color: #208101;
+}
+
+.ye-alert-perfiling {
+	font-size: 14px;
+	position: absolute;
+	x: 0;
+	top: -120px;
+}

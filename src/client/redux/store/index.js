@@ -6,9 +6,9 @@ import rootReducer from '../reducers';
 var enhancder = null;
 
 if(process.env.NODE_ENV === 'production') {
-    enhancder = applyMiddleware(thunk);  
+    enhancder = applyMiddleware(thunk);
 } else {
-    enhancder = applyMiddleware(thunk, createLogger());   
+    enhancder = applyMiddleware(thunk, createLogger());
 }
 
 const store = createStore(rootReducer, enhancder);
